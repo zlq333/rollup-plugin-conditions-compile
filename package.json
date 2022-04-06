@@ -1,0 +1,28 @@
+{
+  "name": "rollup-plugin-conditions-compile",
+  "version": "1.0.0",
+  "description": "Conditional compilation plugin based on rollup",
+  "main": "dist/bundle.cjs.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zlq333/rollup-plugin-conditions-compile.git"
+  },
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "replace",
+    "conditions",
+    "compile"
+  ],
+  "author": "zlq",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup": "^2.70.1"
+  }
+}
