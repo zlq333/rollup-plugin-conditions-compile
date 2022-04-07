@@ -1,21 +1,15 @@
 import recursiveReadFile from "./utils/findOptions";
 
-let result = recursiveReadFile("utils/rollupConfig.js");
+let result = recursiveReadFile("src/utils/rollupConfig.js");
 console.log("result", result);
 
 let getReplaceOptions = eval(result);
 console.log("getReplaceOptions", getReplaceOptions);
 
-const minimist = require("minimist");
-// 根据mode加载不同的环境变量
-const argv = minimist(process.argv.slice(2));
-
-const type = argv.type;
-
 var REG =
   /\/\*\s*IF(DEBUG|TRUE_\w+)(?:\s*\*\/)?([\s\S]+?)(?:\/\*\s*)?FI\1\s*\*\//g;
 
-export default function replacer() {
+export default function replacer(type) {
   return {
     name: "rollup-plugin-conditions-compile",
     transform(code) {

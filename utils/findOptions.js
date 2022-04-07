@@ -3,6 +3,7 @@ var fs = require("fs");
 
 function recursiveReadFile(fileName) {
   var res;
+  console.log("fileName", fileName);
   if (!fs.existsSync(fileName)) return;
   if (isFile(fileName)) {
     res = check(fileName);
