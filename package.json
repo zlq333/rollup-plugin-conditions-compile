@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-conditions-compile",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Conditional compilation plugin based on rollup",
   "main": "dist/bundle.cjs.js",
   "scripts": {

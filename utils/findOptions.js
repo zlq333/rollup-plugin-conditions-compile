@@ -3,7 +3,6 @@ var fs = require("fs");
 
 function recursiveReadFile(fileName) {
   var res;
-  console.log("fileName", fileName);
   if (!fs.existsSync(fileName)) return;
   if (isFile(fileName)) {
     res = check(fileName);
@@ -18,7 +17,6 @@ function recursiveReadFile(fileName) {
       }
     });
   }
-  console.log("res", res);
   return res;
 }
 function check(fileName) {
@@ -26,7 +24,6 @@ function check(fileName) {
   var exc = new RegExp("getReplaceOptions");
   if (exc.test(data)) {
     let content = data;
-    console.log("fileName", fileName);
     return content;
   } else {
     return "";
